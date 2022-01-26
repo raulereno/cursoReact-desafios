@@ -1,0 +1,41 @@
+.navBar{
+    display: flex;
+    background-color: #000000fb;
+    justify-content: space-between;
+
+    .logo{
+        width: 14rem;
+        height: 6rem;
+    }
+    .menu{
+        display: flex;
+        align-self: center;
+        .menu-lista{
+            display: flex;
+            margin: 0;
+            
+            a{
+                display: flex;
+                text-decoration: none;
+                margin: 0;
+                li{
+                    list-style: none;
+                    margin: 0 0.5rem;
+                    padding: 0.4rem;
+                    border-radius:4px ;
+                    color: white;
+
+                    &:hover{
+                        background-color: white;
+                        color: black;
+                    }
+                }
+            }
+        }
+    }
+    .botonLogin{
+        height: 2.5rem;
+        align-self: center;
+        margin-right: 1rem;
+    }
+}
