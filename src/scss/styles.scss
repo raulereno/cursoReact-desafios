@@ -1,6 +1,11 @@
+@import url('https://fonts.googleapis.com/css2?family=Oxygen:wght@300;400;700&display=swap');
+
+*{
+    font-family: 'Oxygen', sans-serif;
+}
 .navBar{
     display: flex;
-    background-color: #000000fb;
+    background-color: #0A0708;
     justify-content: space-between;
 
     .logo{
@@ -14,25 +19,47 @@
             display: flex;
             margin: 0;
             
-            a{
-                display: flex;
-                text-decoration: none;
-                margin: 0;
-                li{
-                    list-style: none;
-                    margin: 0 0.5rem;
-                    padding: 0.4rem;
+            li{
+                list-style: none;
+                margin: 0 0.5rem;
+                align-self: center;
+                
+                
+                a{
+                    background-color: #444444;
+                    display: flex;
+                    text-decoration: none;
+                    margin: 0;
+                    font-weight: bold;
+                    padding: 0.5rem 0.7rem ;
                     border-radius:4px ;
                     color: white;
-
-                    &:hover{
-                        background-color: white;
-                        color: black;
+                        &:hover{
+                            background-color: #B1B1B1;
+                            color: black;
+                            transform: scale(1.1);
+                        }
                     }
+            }
+            .linkACarrito{
+                display: flex;
+                background-color: #0A0708;
+                &:hover{
+                    background-color: #0A0708;
+                        transform: scale(1.2);
+                        background-color: #0A0708;
+                    
+                }
+                
+                .itemList{
+                    color: white;
+                    
+                    margin: 0;
                 }
             }
         }
     }
+    
     .botonLogin{
         height: 2.5rem;
         align-self: center;

@@ -2,7 +2,6 @@ import './scss/styles.scss';
 import Navbar from './componentes/NavBar';
 import logo from "./logo-normal.png";
 
-
 function App() {
 
 

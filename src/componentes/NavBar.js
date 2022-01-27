@@ -1,21 +1,16 @@
 import React from "react";
+import Carrito from "./CartWidget";
+import ItemList from "./ItemListContainer"
 
 function NavBar(){
     return(
         <nav className='menu'>
             <ul className='menu-lista'>
-                <a href="">
-                    <li>Inicio</li>
-                </a>
-                <a href="">
-                    <li>Productos</li>
-                </a>
-                <a href="">
-                    <li>Sobre Nosotros</li>
-                </a>
-                <a href="">
-                    <li>Contacto</li>
-                </a>
+                <li><a href="">Inicio</a></li>
+                <li><a href="">Productos</a></li>
+                <li><a href="">Sobre Nosotros</a></li>
+                <li><a href="">Contacto</a></li>
+                <li><a href="" className='linkACarrito'><Carrito/><ItemList/></a></li>
             </ul>
         </nav>
     )
