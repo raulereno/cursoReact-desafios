@@ -1,4 +1,4 @@
-import iconCarrito from './../local_grocery_store_white_24dp.svg';
+import iconCarrito from './../../../local_grocery_store_white_24dp.svg';
 
 function Carrito(){
     return(
