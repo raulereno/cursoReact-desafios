@@ -2,7 +2,10 @@ import iconCarrito from './../../../local_grocery_store_white_24dp.svg';
 
 function Carrito(){
     return(
-        <img src={iconCarrito} alt="" className='iconoCarrito'/>
+        <>
+        <img src={iconCarrito} alt=""/>
+        <span>4</span>
+        </>
     )
 }
 

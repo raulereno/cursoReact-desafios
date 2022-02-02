@@ -1,6 +1,5 @@
 import React from "react";
 import Carrito from "./CartWidget";
-import ItemList from "./ItemListContainer"
 import logo from "./../../../logo-normal.png";
 
 function NavBar(){
@@ -13,7 +12,7 @@ function NavBar(){
                     <li><a href="">Productos</a></li>
                     <li><a href="">Sobre Nosotros</a></li>
                     <li><a href="">Contacto</a></li>
-                    <li><a href="" className='linkACarrito'><Carrito/><ItemList/></a></li>
+                    <li><a href="" className='linkACarrito'><Carrito/></a></li>
                 </ul>
             </nav>
             <button type='button' className='btn btn-secondary botonLogin'>Login</button>

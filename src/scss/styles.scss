@@ -43,18 +43,12 @@
             }
             .linkACarrito{
                 display: flex;
+                
                 background-color: #0A0708;
                 &:hover{
-                    background-color: #0A0708;
-                        transform: scale(1.2);
-                        background-color: #0A0708;
-                    
-                }
-                
-                .itemList{
-                    color: white;
-                    
-                    margin: 0;
+                    transform: scale(1.2);
+                    color:white;
+                    background-color: #0e0e0e;
                 }
             }
         }
@@ -64,5 +58,17 @@
         height: 2.5rem;
         align-self: center;
         margin-right: 1rem;
+    }
+}
+.itemList{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: black;
+    height: 30rem;
+    font-size:6rem;
+    &:hover{
+        background-color: #0e0e0e;
+        color: white;
     }
 }
