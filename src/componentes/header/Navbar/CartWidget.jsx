@@ -1,6 +1,6 @@
-import iconCarrito from './../../../local_grocery_store_white_24dp.svg';
+import iconCarrito from './iconCarrito.svg';
 
-function Carrito(){
+function CartWidget(){
     return(
         <>
         <img src={iconCarrito} alt=""/>
@@ -9,4 +9,4 @@ function Carrito(){
     )
 }
 
-export default Carrito
+export default CartWidget
