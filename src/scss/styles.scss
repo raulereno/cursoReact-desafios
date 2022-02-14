@@ -72,20 +72,30 @@
         color: white;
     }
 }
+.containerProds{
+    margin-top: 1rem;
 
-.card{
-    width: 18rem ;
-    .controller{
-        width: 8rem;
-        display: flex;
-        border: black solid 1px;
-        margin: 5px;
-        span{
+    display: flex;
+    justify-content: space-around;
+    .card{
+        border: 1px solid black;
+        border-radius: 12.5px;
+        width: 18rem ;
+        .controller{
+            width: 8rem;
+            display: flex;
             border: black solid 1px;
+            margin: 5px;
+            span{
+                border: black solid 1px;
 
-            align-self: center;
-            margin: 0;
-            padding: 8px;
+                align-self: center;
+                margin: 0;
+                padding: 8px;
+            }
+        }
+        .imgProd{
+            width: 100%;
         }
     }
 }
