@@ -9,7 +9,7 @@ function Item({id,name,price,imgUrl}) {
         <h5 className="card-title">{name}</h5>
         <p className="card-text">Price: {price} ETH <img src="https://img.icons8.com/ios/25/000000/ethereum.png"/></p>
     
-        <button className='btn btn-primary'>Agregar al carrito</button>
+        <button className='btn btn-primary'>Agregar al Carrito</button>
       </div>
   
     </div>);

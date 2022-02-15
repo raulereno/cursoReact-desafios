@@ -2,11 +2,8 @@ import React, { useEffect, useState } from "react";
 import Item from "./Item";
 
 function ItemList({ items }) {
-  
-  
   const [products, setProducts] = useState([]);
-  
-  console.log(products)
+
   useEffect(() => {
     const listProducts = new Promise((resolve, reject) => {
       setTimeout(() => {
@@ -14,10 +11,8 @@ function ItemList({ items }) {
       }, 2000);
     });
 
-    listProducts.then((res)=>setProducts(res));
+    listProducts.then((res) => setProducts(res));
   }, []);
-
-  console.log(products);
 
   return (
     <div className="containerProds">
