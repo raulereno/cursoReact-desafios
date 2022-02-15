@@ -21,7 +21,7 @@ function ItemListContainer(){
     ];
     console.log(Object.values(listOfProducts));
     return( 
-        <ItemList data={listOfProducts}/>
+        <ItemList items={listOfProducts}/>
     )
 }
 export default ItemListContainer

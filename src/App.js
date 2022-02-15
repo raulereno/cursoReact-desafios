@@ -1,4 +1,3 @@
-//import ItemListContainer from './componentes/ItemListContainer';
 import NavBar from './componentes/header/Navbar/NavBar';
 import ItemListContainer from './componentes/ItemListContainer';
 import './scss/styles.scss';
