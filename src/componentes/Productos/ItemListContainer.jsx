@@ -1,6 +1,6 @@
 import axios from "axios";
 import React, { useEffect, useState } from "react";
-import ItemList from "./itemList";
+import ItemList from "./ItemList";
 
 function ItemListContainer(){
     const [array, setArray] = useState([])
@@ -22,28 +22,10 @@ function ItemListContainer(){
         imgUrl:"https://lh3.googleusercontent.com/Q9ty8j4RH9oEgJrwR5wUsP6ziU4zSXHqVstiWV1neWi7MJ2ywOxUlJb3zWnbUr91l7hy-s_4gy4aFJjUR64vgev9NOv1HGUKZ08haQ=w600"}
     ];
 
-    const getData = async ()=>{
-        
-        try {    
-            const response= await axios.get("http://hp-api.herokuapp.com/api/characters");
-            let arrayCortado = response.data.slice(0,10)
-            setArray(arrayCortado)
-
-        } catch (error) {
-            console.log(error)
-        }
-    }
-    useEffect(() => {
-      getData()
-    }, [])
+    
     
     return( 
-        <div>
-            {array.map((e, index) =>
-                <img key={index} src={e.image} alt="" className="imgPj" />
-            )}
-        </div>
-        // <ItemList items={listOfProducts}/>
+        <ItemList items={listOfProducts}/>
     )
 }
 export default ItemListContainer
