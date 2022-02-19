@@ -3,6 +3,9 @@
 *{
     font-family: 'Oxygen', sans-serif;
 }
+body{
+    background-color: #0e0e0e;
+}
 .navBar{
     display: flex;
     background-color: #0A0708;
@@ -24,7 +27,10 @@
                 margin: 0 0.5rem;
                 align-self: center;
                 
-                
+                .active{
+                    background-color: #B1B1B1;
+                    color: black;
+                }
                 a{
                     background-color: #444444;
                     display: flex;
@@ -77,6 +83,13 @@
 
     display: flex;
     justify-content: space-around;
+    a{
+        text-decoration: none;
+        color:black;
+        &:hover{
+            transform: scale(1.03);
+        }
+    }
     .card{
         border: 1px solid black;
         border-radius: 12.5px;

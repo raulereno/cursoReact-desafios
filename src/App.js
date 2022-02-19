@@ -1,18 +1,14 @@
-import NavBar from './componentes/header/Navbar/NavBar';
-import ItemListContainer from './componentes/productos/ItemListContainer';
-import './scss/styles.scss';
-
+import Rutas from "./routes";
+import "./scss/styles.scss";
 
 function App() {
-
-  
-  
-  return(
+  return (
     <>
-      <NavBar/>
-      <ItemListContainer/>
+      
+      <Rutas/>
+      
     </>
-  )
+  );
 }
 
 export default App;

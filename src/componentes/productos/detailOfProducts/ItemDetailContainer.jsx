@@ -2,7 +2,7 @@ import React from "react";
 import { useState, useEffect } from "react";
 import ItemDetail from "./ItemDetail";
 
-function ItemDetailContainer() {
+function ItemDetailContainer({id}) {
   const listDetails = [
     {
       id: 1,
@@ -20,7 +20,7 @@ function ItemDetailContainer() {
     {
       id: 2,
       name: "Bored Monkey - Pizza #435",
-      price: 0.005,
+      price: 0.0055,
       imgUrl:
         "https://lh3.googleusercontent.com/j4WrClh7vOILJYB8YA7mkHautsHFkfhp1bpXrHIDfPqplXSAqa9zpu_pJGZ192GKNChzHklNUw3nKn-xmfdxZ-OvDjl5K1JmZ2SI=w600",
       creator: "CFC1AA",
