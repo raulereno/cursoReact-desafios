@@ -4,7 +4,7 @@ import HomePage from "./../componentes/homePage/HomePage";
 import Cart from "./../componentes/carrito/Cart";
 import ItemListContainer from "./../componentes/productos/listOfProducts/ItemListContainer";
 import Checkout from "../componentes/checkout/Checkout";
-import NavBar from "../componentes/header/Navbar/NavBar";
+import NavBar from "../componentes/header/navbar/NavBar";
 import ItemDetailContainer from './../componentes/productos/detailOfProducts/ItemDetailContainer';
 
 function Rutas() {
