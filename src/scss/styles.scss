@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Oxygen:wght@300;400;700&display=swap');
+@import 'homePage';
 
 *{
     font-family: 'Oxygen', sans-serif;
@@ -116,4 +117,19 @@ body{
 .imgDetail{
     width: 23rem;
     height: 23rem;
+}
+
+.controller{
+    background-color: whitesmoke;
+    width: 8rem;
+    display: flex;
+    border: black solid 1px;
+    margin: 5px;
+    span{
+        border: black solid 1px;
+
+        align-self: center;
+        margin: 0;
+        padding: 8px;
+    }
 }

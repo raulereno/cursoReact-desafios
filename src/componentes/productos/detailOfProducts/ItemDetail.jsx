@@ -1,25 +1,26 @@
 import React from "react";
+import ItemCount from './../controller/ItemCount';
 
 function ItemDetail ({ details }) {
-  
-    console.log(details);
+
+    const {name,imgUrl,price,creator,contractAdress,tokenStandard,blockChain,metaData,id} = details ;
     
     return (
         <div className="pageDetail">
-            {details && details.map((e,index) => 
-                (<div className={index}>
-                    <img src={e.imgUrl} alt="" className="imgDetail"/>
-                    <h2>{e.name}</h2>
-                    <p>{e.price}</p>
+                {(<div className={'item'+id}>
+                    <img src={imgUrl} alt="" className="imgDetail"/>
+                    <h2>{name}</h2>
+                    <p>{price}</p>
                     <div>
-                    <p>{e.creator}</p>
-                    <p>{e.contractAdress}</p>
-                    <p>{e.tokenStandard}</p>
-                    <p>{e.blockChain}</p>
-                    <p>{e.metaData}</p>
+                    <p>{creator}</p>
+                    <p>{contractAdress}</p>
+                    <p>{tokenStandard}</p>
+                    <p>{blockChain}</p>
+                    <p>{metaData}</p>
+                    <ItemCount stock={1} initial={1}/>
+                    <button className="btn btn-primary">Agregar al Carrito</button>
                     </div>
-                </div>)
-                )}
+                </div>)}
         </div>);
 }
 export default ItemDetail;

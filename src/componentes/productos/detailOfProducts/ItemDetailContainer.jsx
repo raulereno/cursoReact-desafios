@@ -1,8 +1,10 @@
 import React from "react";
 import { useState, useEffect } from "react";
+import { useParams } from "react-router-dom";
 import ItemDetail from "./ItemDetail";
 
-function ItemDetailContainer({id}) {
+function ItemDetailContainer() {
+  
   const listDetails = [
     {
       id: 1,
@@ -43,8 +45,11 @@ function ItemDetailContainer({id}) {
       metaData: "Editable",
     },
   ];
+  const {id} = useParams();
+  
+  const buscar = listDetails.findIndex((e)=>e.id == id)
 
-  const [details, setDetails] = useState([]);
+  const [details, setDetails] = useState();
 
   
   useEffect(() => {
@@ -55,10 +60,10 @@ function ItemDetailContainer({id}) {
       }, 2000);
     });
 
-    getItems.then((res) => setDetails(res));
+    getItems.then((res) => setDetails(res[buscar]));
 
-  }, []);
+  }, [buscar]);
 
-  return (<ItemDetail details={details} />);
+  return (<>{details && <ItemDetail details={details} />}</>);
 }
 export default ItemDetailContainer;
