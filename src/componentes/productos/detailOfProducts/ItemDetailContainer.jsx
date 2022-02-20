@@ -64,6 +64,8 @@ function ItemDetailContainer() {
 
   }, [buscar]);
 
-  return (<>{details && <ItemDetail details={details} />}</>);
+  return (<>
+    {details && <ItemDetail details={details} />}
+  </>);
 }
 export default ItemDetailContainer;

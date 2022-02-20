@@ -4,9 +4,7 @@ import "./scss/styles.scss";
 function App() {
   return (
     <>
-      
       <Rutas/>
-      
     </>
   );
 }

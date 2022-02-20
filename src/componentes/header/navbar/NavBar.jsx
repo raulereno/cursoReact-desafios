@@ -13,7 +13,16 @@ function NavBar(){
                 <nav className='menu'>
                     <ul className='menu-lista'>
                         <li><NavLink to={"/"} className={isActive}>Inicio</NavLink></li>
-                        <li><NavLink to={"/Productos"} className={isActive}>Productos</NavLink></li>
+                        <li><div className="dropdown itemsDespegables">
+                            <button className="dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                               Productos
+                            </button>
+                            <ul className="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                                <li><a className="dropdown-item" href="#">Coleccion: Bored Monkeys</a></li>
+                                <li><a className="dropdown-item" href="#">Coleccion: Lazy Lions </a></li>
+                                <li><NavLink className="dropdown-item" to={'/Productos'}>Todos los productos</NavLink></li>
+                            </ul>
+                            </div></li>
                         <li><a href="">Sobre Nosotros</a></li>
                         <li><a href="">Contacto</a></li>
                         <li><NavLink to={"/Cart"} className={'linkACarrito '+{isActive}}><CartWidget/></NavLink></li>

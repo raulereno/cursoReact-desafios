@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Oxygen:wght@300;400;700&display=swap');
 @import 'homePage';
+@import 'detailOfProducts';
 
 *{
     font-family: 'Oxygen', sans-serif;
@@ -7,6 +8,7 @@
 body{
     background-color: #0e0e0e;
 }
+
 .navBar{
     display: flex;
     background-color: #0A0708;
@@ -22,7 +24,21 @@ body{
         .menu-lista{
             display: flex;
             margin: 0;
-            
+            .itemsDespegables{
+               button{
+                    background-color: #444444;
+                    text-decoration: none;
+                    margin: 0;
+                    font-weight: bold;
+                    padding: 0.5rem 0.7rem ;
+                    border:0;
+                    border-radius:4px ;
+                    color: white;
+               }
+               ul{
+                   background-color:#444444 ;
+               }
+            }
             li{
                 list-style: none;
                 margin: 0 0.5rem;
@@ -102,7 +118,6 @@ body{
             margin: 5px;
             span{
                 border: black solid 1px;
-
                 align-self: center;
                 margin: 0;
                 padding: 8px;
@@ -114,10 +129,6 @@ body{
     }
 }
 
-.imgDetail{
-    width: 23rem;
-    height: 23rem;
-}
 
 .controller{
     background-color: whitesmoke;
@@ -127,7 +138,7 @@ body{
     margin: 5px;
     span{
         border: black solid 1px;
-
+        color: black;
         align-self: center;
         margin: 0;
         padding: 8px;
