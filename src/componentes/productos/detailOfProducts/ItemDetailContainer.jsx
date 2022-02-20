@@ -4,7 +4,6 @@ import { useParams } from "react-router-dom";
 import ItemDetail from "./ItemDetail";
 
 function ItemDetailContainer() {
-  
   const listDetails = [
     {
       id: 1,
@@ -44,16 +43,50 @@ function ItemDetailContainer() {
       blockChain: "Polygon",
       metaData: "Editable",
     },
+
+    {
+      id: 4,
+      name: "Lazy Lion - Bistec #2690",
+      price: 1.75,
+      imgUrl:
+        "https://lh3.googleusercontent.com/sGLBpTc7uw-4ZW_tAu8ellLA2b4T1QgQ0f_6baFWGcdMZejEpCljGCnTQ44UEVbp3F_KJ5T2Lg0mHyzdqrrpkibhBwJKF0G1JCssXw=w600",
+        creator: "CFC1AA",
+        contractAdress: "0x8943C7bAC1914C9A7ABa750Bf2B6B09Fd21037E0",
+        tokenStandard: "ERC-721",
+        blockChain: "Ethereum",
+    },
+
+    {
+      id: 5,
+      name: "Lazy Lion - Angry #8466",
+      price: 1.8,
+      imgUrl:
+        "https://lh3.googleusercontent.com/DybGPYq-96BUganEqGAVRUoK13ibNFVqvVE53VIJTewL3Qpe95pHU8UQeK_UtvK-kiFt5O6lKzuqtUpxwHkImB8tAi2VMnX-ayEY=w600",
+      creator: "Lazy-Lions",
+      contractAdress: "0x8943C7bAC1914C9A7ABa750Bf2B6B09Fd21037E0",
+      tokenStandard: "ERC-721",
+      blockChain: "Ethereum",
+    },
+
+    {
+      id: 6,
+      name: "Lazy Lion - Smoke #6345",
+      price: 1.84,
+      imgUrl:
+        "https://lh3.googleusercontent.com/rNN1YFjQENikZX7SX9s8oUQGhiH5pgbFXBE8jDXsY45Ybmd06CY9OLrI_oivLypSk7exMC4U4ZxZ5FpfLWjquUn-mRhP4FOHbS0QS2Q=w600",
+        creator: "Lazy-Lions",
+      contractAdress: "0x8943C7bAC1914C9A7ABa750Bf2B6B09Fd21037E0",
+      tokenStandard: "ERC-721",
+      blockChain: "Ethereum",
+    },
   ];
-  const {id} = useParams();
-  
-  const buscar = listDetails.findIndex((e)=>e.id == id)
+  const { id } = useParams();
+
+  const buscar = listDetails.findIndex((e) => e.id == id);
 
   const [details, setDetails] = useState();
 
-  
   useEffect(() => {
-    
     const getItems = new Promise((resolve, reject) => {
       setTimeout(() => {
         resolve(listDetails);
@@ -61,11 +94,8 @@ function ItemDetailContainer() {
     });
 
     getItems.then((res) => setDetails(res[buscar]));
-
   }, [buscar]);
 
-  return (<>
-    {details && <ItemDetail details={details} />}
-  </>);
+  return <>{details && <ItemDetail details={details} />}</>;
 }
 export default ItemDetailContainer;

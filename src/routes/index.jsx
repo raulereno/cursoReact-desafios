@@ -12,11 +12,13 @@ function Rutas() {
     <BrowserRouter>
       <NavBar />
       <Routes>
+        
         <Route path="/" element={<HomePage />} />
         <Route path="/Productos" element={<ItemListContainer />} />
         <Route path="/Cart" element={<Cart />} />
         <Route path="/Cart/Checkout" element={<Checkout />} />
         <Route path="/Productos/:id" element={<ItemDetailContainer />} />
+        <Route path="/categoria/:productosCategoria" element={<ItemListContainer />} />
 
       </Routes>
     </BrowserRouter>

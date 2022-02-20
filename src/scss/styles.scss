@@ -99,7 +99,8 @@ body{
     margin-top: 1rem;
 
     display: flex;
-    justify-content: space-around;
+    flex-wrap:wrap;
+    justify-content: space-evenly;
     a{
         text-decoration: none;
         color:black;
@@ -109,8 +110,9 @@ body{
     }
     .card{
         border: 1px solid black;
-        border-radius: 12.5px;
+        border-radius: 12px;
         width: 18rem ;
+        margin:1rem 2rem 0 2rem;
         .controller{
             width: 8rem;
             display: flex;
@@ -125,6 +127,7 @@ body{
         }
         .imgProd{
             width: 100%;
+            border-radius: 11px;
         }
     }
 }

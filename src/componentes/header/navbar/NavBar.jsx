@@ -1,7 +1,7 @@
 import React from "react";
 import logo from "./../../../logo-normal.png";
 import CartWidget from "./CartWidget";
-import {NavLink} from 'react-router-dom';
+import {NavLink, Link} from 'react-router-dom';
 
 function NavBar(){
     const isActive = ({isActive})=> isActive ? 'active': '';
@@ -18,9 +18,9 @@ function NavBar(){
                                Productos
                             </button>
                             <ul className="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-                                <li><a className="dropdown-item" href="#">Coleccion: Bored Monkeys</a></li>
-                                <li><a className="dropdown-item" href="#">Coleccion: Lazy Lions </a></li>
-                                <li><NavLink className="dropdown-item" to={'/Productos'}>Todos los productos</NavLink></li>
+                                <li><Link className="dropdown-item" to={'/Categoria/BoredMonkeys'}>Coleccion: Bored Monkeys</Link></li>
+                                <li><Link className="dropdown-item" to={'/Categoria/LazyLions'}>Coleccion: Lazy Lions </Link></li>
+                                <li><Link className="dropdown-item" to={'/Productos'}>Todos los productos</Link></li>
                             </ul>
                             </div></li>
                         <li><a href="">Sobre Nosotros</a></li>

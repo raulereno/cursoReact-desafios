@@ -26,7 +26,7 @@ function ItemDetail ({ details }) {
                         <p>Contract Address: {contractAdress}</p>
                         <p>Token Standard: {tokenStandard}</p>
                         <p>Blockchain: {blockChain}</p>
-                        <p>Metadata: {metaData}</p>
+                        <p>{metaData && "Metadata:"+metaData}</p>
                     </div>
                 </div>)}
         </div>);
