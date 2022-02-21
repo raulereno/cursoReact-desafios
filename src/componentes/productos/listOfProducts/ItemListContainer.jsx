@@ -60,30 +60,30 @@ function ItemListContainer() {
   ];
 
   const [products, setProducts] = useState([]);
-
+  
+  let filtrarPorCategoria=[];
+  
   const { productosCategoria } = useParams();
-  console.log(productosCategoria);
 
+  console.log(productosCategoria);
   
-  
+  if (productosCategoria != undefined) {
+     filtrarPorCategoria = listOfProducts.filter(
+      (e) => e.category === productosCategoria
+    );
+  }
+
+  console.log(filtrarPorCategoria);
   useEffect(() => {
     const listProducts = new Promise((resolve, reject) => {
       setTimeout(() => {
-        if (productosCategoria != undefined) {
-          const filtrarPorCategoria = listOfProducts.filter(
-            (e) => e.category === productosCategoria
-          );
-          console.log("entro aca");
-          resolve(filtrarPorCategoria);
-        } else {
           resolve(listOfProducts);
-        }
       }, 2000);
     });
 
     listProducts.then((res) => setProducts(res));
   }, []);
 
-  return <ItemList products={products} />;
+  return <>{(productosCategoria ===undefined)?<ItemList products={products} />:<ItemList products={filtrarPorCategoria} />}</>;
 }
 export default ItemListContainer;

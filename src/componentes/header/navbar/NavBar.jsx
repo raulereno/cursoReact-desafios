@@ -23,8 +23,8 @@ function NavBar(){
                                 <li><Link className="dropdown-item" to={'/Productos'}>Todos los productos</Link></li>
                             </ul>
                             </div></li>
-                        <li><a href="">Sobre Nosotros</a></li>
-                        <li><a href="">Contacto</a></li>
+                        {/* <li><a href="">Sobre Nosotros</a></li>
+                        <li><a href="">Contacto</a></li> */}
                         <li><NavLink to={"/Cart"} className={'linkACarrito '+{isActive}}><CartWidget/></NavLink></li>
                     </ul>
                 </nav>
