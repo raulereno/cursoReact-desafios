@@ -12,20 +12,33 @@ function NavBar(){
             <NavLink to={"/"}><img src={logo} className='logo'/></NavLink>
                 <nav className='menu'>
                     <ul className='menu-lista'>
-                        <li><NavLink to={"/"} className={isActive}>Inicio</NavLink></li>
-                        <li><div className="dropdown itemsDespegables">
+                        <li>
+                            <NavLink to={"/"} className={isActive}>Inicio</NavLink></li>
+                        <li>
+                            <div className="dropdown itemsDespegables">
                             <button className="dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
                                Productos
                             </button>
                             <ul className="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-                                <li><Link className="dropdown-item" to={'/Categoria/BoredMonkeys'}>Coleccion: Bored Monkeys</Link></li>
-                                <li><Link className="dropdown-item" to={'/Categoria/LazyLions'}>Coleccion: Lazy Lions </Link></li>
-                                <li><Link className="dropdown-item" to={'/Productos'}>Todos los productos</Link></li>
+                                <li>
+                                    <NavLink className={'dropdown-item '+{isActive}} to={'/Categoria/BoredMonkeys'}>Coleccion: Bored Monkeys</NavLink>
+                                </li>
+                                <li>
+                                    <NavLink className={"dropdown-item "+{isActive}} to={'/Categoria/LazyLions'}>Coleccion: Lazy Lions </NavLink>
+                                </li>
+                                <li>
+                                    <NavLink className={"dropdown-item "+{isActive}} to={'/Productos'}>Todos los productos</NavLink>
+                                </li>
                             </ul>
-                            </div></li>
+                            </div>
+                        </li>
                         {/* <li><a href="">Sobre Nosotros</a></li>
                         <li><a href="">Contacto</a></li> */}
-                        <li><NavLink to={"/Cart"} className={'linkACarrito '+{isActive}}><CartWidget/></NavLink></li>
+                        <li>
+                            <NavLink to={"/Cart"} className={'linkACarrito '+{isActive}}>
+                                <CartWidget/>
+                            </NavLink>
+                        </li>
                     </ul>
                 </nav>
                 <button type='button' className='btn btn-secondary botonLogin'>Login</button>
