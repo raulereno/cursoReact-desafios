@@ -1,3 +1,4 @@
+import Prueba from "./componentes/pruebas/Prueba";
 import Rutas from "./routes";
 import "./scss/styles.scss";
 

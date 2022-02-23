@@ -64,8 +64,6 @@ function ItemListContainer() {
   let filtrarPorCategoria=[];
   
   const { productosCategoria } = useParams();
-
-  console.log(productosCategoria);
   
   if (productosCategoria != undefined) {
      filtrarPorCategoria = listOfProducts.filter(
@@ -73,7 +71,6 @@ function ItemListContainer() {
     );
   }
 
-  console.log(filtrarPorCategoria);
   useEffect(() => {
     const listProducts = new Promise((resolve, reject) => {
       setTimeout(() => {

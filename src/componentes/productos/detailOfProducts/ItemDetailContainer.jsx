@@ -16,6 +16,7 @@ function ItemDetailContainer() {
       tokenStandard: "ERC-1155",
       blockChain: "Polygon",
       metaData: "editable",
+      stock:5
     },
 
     {
@@ -29,6 +30,7 @@ function ItemDetailContainer() {
       tokenStandard: "ERC-1155",
       blockChain: "Polygon",
       metaData: "Editable",
+      stock:2
     },
 
     {
@@ -42,6 +44,7 @@ function ItemDetailContainer() {
       tokenStandard: "ERC-1155",
       blockChain: "Polygon",
       metaData: "Editable",
+      stock:6
     },
 
     {
@@ -54,6 +57,7 @@ function ItemDetailContainer() {
         contractAdress: "0x8943C7bAC1914C9A7ABa750Bf2B6B09Fd21037E0",
         tokenStandard: "ERC-721",
         blockChain: "Ethereum",
+        stock:1
     },
 
     {
@@ -66,6 +70,7 @@ function ItemDetailContainer() {
       contractAdress: "0x8943C7bAC1914C9A7ABa750Bf2B6B09Fd21037E0",
       tokenStandard: "ERC-721",
       blockChain: "Ethereum",
+      stock:3
     },
 
     {
@@ -78,6 +83,7 @@ function ItemDetailContainer() {
       contractAdress: "0x8943C7bAC1914C9A7ABa750Bf2B6B09Fd21037E0",
       tokenStandard: "ERC-721",
       blockChain: "Ethereum",
+      stock:8
     },
   ];
   const { id } = useParams();
