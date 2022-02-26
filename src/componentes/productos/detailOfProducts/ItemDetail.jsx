@@ -4,7 +4,8 @@ import {Link} from 'react-router-dom'
 import ValorMonedaEth from "../../consultaValor/ValorMonedaEth";
 
 function ItemDetail ({ details }) {
-
+    
+    
     const {name,imgUrl,price,creator,contractAdress,tokenStandard,blockChain,metaData,id,stock} = details ;
     
     const [cantidad, setCantidad] = useState(null)
@@ -25,7 +26,7 @@ function ItemDetail ({ details }) {
                         <p>ARS: <strong>Funcion en Proceso</strong> </p>
                         <p>Creado por: {creator}</p>
                         <p>Disponibilidad: {(cantidad)? stock-cantidad : stock} en stock</p>
-                        {(cantidad===null) ? <ItemCount stock={stock} initial={1} onAdd={onAdd}/> : <Link to={'/Cart'} className="btn btn-success comprarAhora">Finalizar Compra</Link>}
+                        {(cantidad===null) ? <ItemCount stock={stock} initial={1} onAdd={onAdd} details={details}/> : <Link to={'/Cart'} className="btn btn-success comprarAhora">Ir a Carrito</Link>}
                        
                     </div>
                     <div className="additionalInfo">

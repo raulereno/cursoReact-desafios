@@ -1,0 +1,36 @@
+.listCartItems{
+    list-style: none;
+    
+    display: flex;
+    flex-direction: column;
+    
+    background-color: rgb(70, 70, 70);
+    .itemInCart{
+
+        display: flex;
+        justify-content: space-evenly;
+        background-color: rgb(116, 116, 116);
+        margin: 1rem;
+        padding: 10px;
+        .infoItemInCart{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+        .priceItemInCart{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+
+        }
+        .imgInCart{
+            width: 7rem;
+        }
+        .deleteItem{
+            align-self: center;
+            width: 3rem;
+            height: 3rem;
+        }
+    }
+    
+}

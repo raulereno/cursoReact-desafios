@@ -3,6 +3,8 @@ import { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 import ItemDetail from "./ItemDetail";
 
+
+
 function ItemDetailContainer() {
   const listDetails = [
     {
@@ -86,6 +88,10 @@ function ItemDetailContainer() {
       stock:8
     },
   ];
+
+
+  
+
   const { id } = useParams();
 
   const buscar = listDetails.findIndex((e) => e.id == id);
@@ -101,6 +107,8 @@ function ItemDetailContainer() {
 
     getItems.then((res) => setDetails(res[buscar]));
   }, [buscar]);
+
+
 
   return <>{details && <ItemDetail details={details} />}</>;
 }

@@ -1,6 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Oxygen:wght@300;400;700&display=swap');
 @import 'homePage';
 @import 'detailOfProducts';
+@import 'cart';
 
 *{
     font-family: 'Oxygen', sans-serif;
@@ -95,12 +96,14 @@ body{
         color: white;
     }
 }
+
 .containerProds{
     margin-top: 1rem;
 
     display: flex;
     flex-wrap:wrap;
     justify-content: space-evenly;
+    
     a{
         text-decoration: none;
         color:black;
@@ -109,10 +112,16 @@ body{
         }
     }
     .card{
+        display: flex;
         border: 1px solid black;
         border-radius: 12px;
         width: 18rem ;
         margin:1rem 2rem 0 2rem;
+        padding: 1rem;
+        background-color: #a0a0a0;
+        .card-title{
+            font-size: 1.5rem;
+        }
         .controller{
             width: 8rem;
             display: flex;
@@ -129,7 +138,13 @@ body{
             width: 100%;
             border-radius: 11px;
         }
+        .btAddToCartList{
+            align-self: flex-end;
+            width: 10rem;
+            
+        }
     }
+    
 }
 
 

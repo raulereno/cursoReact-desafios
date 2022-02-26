@@ -1,11 +1,14 @@
-import React from 'react';
+import React, { useContext,useState } from 'react';
 import iconAdd from './add.svg';
 import iconRemove from './remove.svg';
-import { useState } from 'react';
+import {CarritoContext} from '../../../context/CartContext'
 
-function ItemCount({stock,initial,onAdd}) {
+
+function ItemCount({stock,initial,onAdd,details}) {
   
   const [contador, setContador] = useState(initial);
+
+  const {addItem} = useContext(CarritoContext)
 
   function addToCount(operador){
     if(operador=="+"){
@@ -23,7 +26,7 @@ function ItemCount({stock,initial,onAdd}) {
       <button onClick={()=>addToCount("-")} type='button' className='btn'><img src={iconRemove} alt="" /></button>
       <span>{contador}</span>
       <button onClick={()=>addToCount("+")} type='button' className='btn'><img src={iconAdd} alt="" /></button>
-      <button className='btn btn-primary' onClick={()=>onAdd(contador)}>Agregar a Carrito</button>
+      <button className='btn btn-primary' onClick={()=>{onAdd(contador); addItem(details,contador) }}>Agregar a Carrito</button>
     </div>);
 }
 

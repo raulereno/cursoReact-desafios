@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import ItemList from "./ItemList";
 
+
 function ItemListContainer() {
   const listOfProducts = [
     {
@@ -81,6 +82,9 @@ function ItemListContainer() {
     listProducts.then((res) => setProducts(res));
   }, []);
 
-  return <>{(productosCategoria ===undefined)?<ItemList products={products} />:<ItemList products={filtrarPorCategoria} />}</>;
+
+  return <>
+  {(productosCategoria ===undefined)?<ItemList products={products} />:<ItemList products={filtrarPorCategoria} />}
+  </>;
 }
 export default ItemListContainer;
