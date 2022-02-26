@@ -3,11 +3,12 @@ import ValorMoneda from '../../consultaValor/ValorMonedaEth';
 import {CarritoContext} from '../../../context/CartContext'
 import { useContext } from 'react';
 
-function Item({id,name,price,imgUrl}) {
+function Item({id,name,price,imgUrl,products}) {
 
 
     const {addItem}= useContext(CarritoContext)
 
+    const find = products.find((e)=>e.id==id)
     return (
     
       <div className={'card'}>
@@ -23,7 +24,7 @@ function Item({id,name,price,imgUrl}) {
           </div>
         </Link>
         {/* Fn en proceso */}
-        <button className='btn btn-primary btAddToCartList' onClick={()=>addItem(id,1)}>Agregar al Carrito</button>
+        <button className='btn btn-primary btAddToCartList' onClick={()=>addItem(find,1)}>Agregar al Carrito</button>
       </div>
     
     );

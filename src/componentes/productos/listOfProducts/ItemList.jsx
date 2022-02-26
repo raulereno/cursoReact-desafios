@@ -7,7 +7,7 @@ function ItemList({ products }) {
     <div className="containerProds">
       {products &&
         products.map((i) => (
-          <Item key={i.id} id={i.id} name={i.name} price={i.price} imgUrl={i.imgUrl} />
+          <Item key={i.id} id={i.id} name={i.name} price={i.price} imgUrl={i.imgUrl} products={products} />
         ))}
     </div>
   );
