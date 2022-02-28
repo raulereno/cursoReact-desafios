@@ -8,10 +8,10 @@ function CartWidget(){
     const {carrito}= useContext(CarritoContext)
 
     return(
-        <>
-        <img src={iconCarrito} alt=""/>
-        <span>{carrito.length}</span>
-        </>
+        <div>
+            {(carrito.length == 0)?"":<div><img src={iconCarrito} alt=""/>
+            <span>{carrito.length}</span></div>}
+        </div>
     )
 }
 

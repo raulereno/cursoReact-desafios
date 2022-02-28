@@ -1,43 +1,70 @@
-import React,{createContext, useState} from 'react'
+import React, { createContext, useState } from "react";
 
 export const CarritoContext = createContext();
 
+const CartContext = ({ children }) => {
 
-const CartContext = ({children}) => {
-  
   const [carrito, setCarrito] = useState([]);
-  const [quantity, setQuantity]  = useState(null)
 
-  const addItem = (item,quantity) =>{
-    setCarrito([...carrito,item]);
-    setQuantity(quantity)
-  }
+  const [cantidad, setCantidad] = useState(null);
 
-  const removeItem= (id)=>{
-    console.log(id);
-    const cartActualizado = carrito.filter((e)=>e.id != id)
-    console.log(cartActualizado);
-    setCarrito(cartActualizado)
-  }
-  const clearCart= ()=>{
-    setCarrito([])
-  }
-  const isInCart=(id)=>{
-    //Funcion que busca en el cart y retorna true o false
-  }
+  const [totalEthEnCart, setTotalEth] = useState(null) 
+
+  const addItem = (item, quantity) => {
+    
+    let totalEth=0;
+    totalEth = totalEthEnCart + item.price * quantity;
+    
+    setTotalEth(totalEth)
+    console.log(totalEthEnCart);
+
+    if(isInCart(item.id)){
+      return
+
+    }else{
+      setCarrito([...carrito, item]);
+      setCantidad(quantity);
+      
+    }
+    
+  };
+
+  const removeItem = (id) => {
+    let restarPrecio= carrito.find((e)=>e.id == id);
+
+    setTotalEth(totalEthEnCart-restarPrecio.price);
+
+    const cartActualizado = carrito.filter((e) => e.id != id);
+    setCarrito(cartActualizado);
+  };
+  
+  const clearCart = () => {
+    setCarrito([]);
+    setTotalEth(0)
+  };
+  
+  const isInCart = (id) => {
+    return carrito.some((e)=>e.id == id)      
+  };
+ 
+  console.log(carrito)
 
   return (
-    <CarritoContext.Provider value={{
-      //Fn
-      addItem,
-      removeItem,
-      clearCart,
-      //Variables
-      carrito,
-      quantity}}>
+    <CarritoContext.Provider
+      value={{
+        //Fn
+        addItem,
+        removeItem,
+        clearCart,
+        //Variables
+        carrito,
+        cantidad,
+        totalEthEnCart
+      }}
+    >
       {children}
     </CarritoContext.Provider>
-  )
-}
+  );
+};
 
-export default CartContext
+export default CartContext;

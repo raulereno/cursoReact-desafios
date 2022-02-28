@@ -1,3 +1,8 @@
+.tituloCarrito{
+    text-align: center;
+    margin: 2rem 0 0 0;
+    background-color: rgb(212, 212, 212);
+}
 .listCartItems{
     list-style: none;
     
@@ -16,6 +21,10 @@
             display: flex;
             flex-direction: column;
             justify-content: center;
+            .nombreDelProducto{
+                font-size: 1.2rem;
+                font-weight: bolder;
+            }
         }
         .priceItemInCart{
             display: flex;
@@ -33,4 +42,46 @@
         }
     }
     
+}
+.mensajeCarritoVacio{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    margin-top: 5rem;
+    p{
+        font-size: 2.5rem;
+        color: whitesmoke;
+    }
+    .links{
+        a{
+            margin: 1rem;
+            &:hover{
+                background-color: rgb(187, 187, 187);
+                transform: scale(1.1);
+            }
+        }
+    }
+}
+.infoGeneralCarrito{
+    display: flex;
+    justify-content: flex-end;
+    margin: 1px 1rem 1rem 0;
+    .precios{
+        p{
+            color: whitesmoke;
+            font-size: 2rem;
+            .signoEth{
+                margin-bottom: 7px;
+            }
+        }
+    }
+    .botonesCarrito{
+        display: flex;
+        flex-direction: column;
+        margin-left: 1rem;
+        button{
+            margin: 1rem;
+        }
+    }
 }

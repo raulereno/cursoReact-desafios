@@ -1,0 +1,15 @@
+.loading{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+    margin-top: 10rem;
+    span{
+        display: block;
+        transform: scale(1.5);
+    }
+    .textoLoading{
+        font-size: 3rem;
+        color: white;
+    }
+}
