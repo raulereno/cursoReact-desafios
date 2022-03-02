@@ -12,7 +12,11 @@ const CartContext = ({ children }) => {
 
   const addItem = (item, quantity) => {
     
+    if(quantity>1){item.cantidad+= quantity}
+    else{ item.cantidad++}
+    
     let totalEth=0;
+    
     totalEth = totalEthEnCart + item.price * quantity;
     
     setTotalEth(totalEth)
@@ -32,7 +36,7 @@ const CartContext = ({ children }) => {
   const removeItem = (id) => {
     let restarPrecio= carrito.find((e)=>e.id == id);
 
-    setTotalEth(totalEthEnCart-restarPrecio.price);
+    setTotalEth(totalEthEnCart-(restarPrecio.price*restarPrecio.cantidad));
 
     const cartActualizado = carrito.filter((e) => e.id != id);
     setCarrito(cartActualizado);
@@ -46,9 +50,7 @@ const CartContext = ({ children }) => {
   const isInCart = (id) => {
     return carrito.some((e)=>e.id == id)      
   };
- 
-  console.log(carrito)
-
+   
   return (
     <CarritoContext.Provider
       value={{

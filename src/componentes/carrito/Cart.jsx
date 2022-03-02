@@ -24,12 +24,12 @@ function Cart() {
       <h1 className='tituloCarrito'>Carrito({carrito.length})</h1>
       <ul className='listCartItems'>{carrito &&
           carrito.map((i) => (
-              <li className='itemInCart'>
+              <li className='itemInCart' key={i.id}>
                 <img src={i.imgUrl} className='imgInCart'/>
                 <div className='infoItemInCart'>
                   <p className='nombreDelProducto'>{i.name}</p>
                   <p>Creado por: {i.creator}</p>
-                  <p>Cantidad:{cantidad}</p>
+                  <p>Cantidad:{i.cantidad}</p>
                 </div>
                 <div className='priceItemInCart'>
                   <p>Precio: {i.price} ETH <img src="https://img.icons8.com/ios/25/000000/ethereum.png"/></p>
@@ -48,7 +48,7 @@ function Cart() {
       {/* <Link to={'/Cart/Checkout'} className='btn btn-primary'>Checkout</Link> */}
       <div className='infoGeneralCarrito'>
         <div className='precios'>
-          <p>Total en ETH: {totalEthEnCart} {totalEthEnCart? <img src="https://img.icons8.com/ios/35/FFFFFF/ethereum.png" className='signoEth'/>:""} </p>
+          <p>Total en ETH: {totalEthEnCart.toFixed(5)} {totalEthEnCart? <img src="https://img.icons8.com/ios/35/FFFFFF/ethereum.png" className='signoEth'/>:""} </p>
           <p>Total en USD: {<ValorMoneda precioEnEth={totalEthEnCart}/>} $USD </p>
         </div>
         

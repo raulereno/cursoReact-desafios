@@ -18,7 +18,8 @@ function ItemDetailContainer() {
       tokenStandard: "ERC-1155",
       blockChain: "Polygon",
       metaData: "editable",
-      stock:5
+      stock:5,
+      cantidad:0
     },
 
     {
@@ -32,7 +33,8 @@ function ItemDetailContainer() {
       tokenStandard: "ERC-1155",
       blockChain: "Polygon",
       metaData: "Editable",
-      stock:2
+      stock:2,
+      cantidad:0
     },
 
     {
@@ -46,7 +48,8 @@ function ItemDetailContainer() {
       tokenStandard: "ERC-1155",
       blockChain: "Polygon",
       metaData: "Editable",
-      stock:6
+      stock:6,
+      cantidad:0
     },
 
     {
@@ -59,7 +62,8 @@ function ItemDetailContainer() {
         contractAdress: "0x8943C7bAC1914C9A7ABa750Bf2B6B09Fd21037E0",
         tokenStandard: "ERC-721",
         blockChain: "Ethereum",
-        stock:1
+        stock:1,
+        cantidad:0
     },
 
     {
@@ -72,7 +76,8 @@ function ItemDetailContainer() {
       contractAdress: "0x8943C7bAC1914C9A7ABa750Bf2B6B09Fd21037E0",
       tokenStandard: "ERC-721",
       blockChain: "Ethereum",
-      stock:3
+      stock:3,
+      cantidad:0
     },
 
     {
@@ -85,7 +90,8 @@ function ItemDetailContainer() {
       contractAdress: "0x8943C7bAC1914C9A7ABa750Bf2B6B09Fd21037E0",
       tokenStandard: "ERC-721",
       blockChain: "Ethereum",
-      stock:8
+      stock:8,
+      cantidad:0
     },
   ];
 
