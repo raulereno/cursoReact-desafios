@@ -19,7 +19,7 @@ function ItemDetail ({ details }) {
                 {(<div className={'item'+id}>
                     <img src={imgUrl} alt="" className="imgDetail"/>
                     <div className="containerInfoProd">
-                        <Link to={'/Productos'} className='linkAColeccion'>Colecion de Boreds Monkeys</Link>
+                        <Link to={'/Productos'} className='linkAColeccion'>Colecion NFT's</Link>
                         <h2>{name}</h2>
                         <p>Precio: {price} ETH <img src="https://img.icons8.com/ios/25/ffffff/ethereum.png"/></p>
                         <p>USD: ${<ValorMonedaEth precioEnEth={price}/>}</p>
@@ -30,11 +30,11 @@ function ItemDetail ({ details }) {
                        
                     </div>
                     <div className="additionalInfo">
-                        <h3>Informacion Adicional:</h3>
-                        <p>Contract Address: {contractAdress}</p>
-                        <p>Token Standard: {tokenStandard}</p>
-                        <p>Blockchain: {blockChain}</p>
-                        <p>{metaData && "Metadata:"+metaData}</p>
+                        <h3><b>Informacion Adicional:</b></h3>
+                        <p><b>Contract Address:</b> {contractAdress}</p>
+                        <p><b>Token Standard:</b> {tokenStandard}</p>
+                        <p><b>Blockchain:</b> {blockChain}</p>
+                        {metaData ? (<p><b> Metadata:</b> {metaData}</p>):''}
                     </div>
                 </div>)}
         </div>);

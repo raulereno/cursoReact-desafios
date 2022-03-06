@@ -11,7 +11,7 @@ function Item({id,name,price,imgUrl,products}) {
     const find = products.find((e)=>e.id==id)
     return (
     
-      <div className={'card'}>
+      <div className={'card '+'item'+id}>
         <Link to={'/Productos/'+id} className={'linkADetalle'+id}>
       
           <img src={imgUrl} className="card-img-top imgProd" alt="..."/>

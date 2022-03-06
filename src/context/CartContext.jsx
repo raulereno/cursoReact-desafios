@@ -20,7 +20,6 @@ const CartContext = ({ children }) => {
     totalEth = totalEthEnCart + item.price * quantity;
     
     setTotalEth(totalEth)
-    console.log(totalEthEnCart);
 
     if(isInCart(item.id)){
       return

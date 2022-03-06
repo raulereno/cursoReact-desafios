@@ -32,8 +32,8 @@ function Cart() {
                   <p>Cantidad:{i.cantidad}</p>
                 </div>
                 <div className='priceItemInCart'>
-                  <p>Precio: {i.price} ETH <img src="https://img.icons8.com/ios/25/000000/ethereum.png"/></p>
-                  <p>Precio en USD: {<ValorMoneda precioEnEth={i.price}/>} $USD</p>
+                  <p>Precio: {i.price*i.cantidad} ETH <img src="https://img.icons8.com/ios/25/000000/ethereum.png"/></p>
+                  <p>Precio en USD: {<ValorMoneda precioEnEth={i.price*i.cantidad}/>} $USD</p>
                 </div>
                 {/* Agregar funcionalidad a este boton */}
                 <button className='btn btn-light deleteItem' onClick={()=>removeItem(i.id)}>
