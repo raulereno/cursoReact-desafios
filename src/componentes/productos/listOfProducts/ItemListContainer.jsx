@@ -1,60 +1,28 @@
 import React, { useEffect, useState } from "react";
-import { collection, getDocs } from "firebase/firestore";
 import { useParams } from "react-router-dom";
+import useFireStore from "../../../hooks/useFireStore";
 import Loader from "../../loader/Loader";
 import ItemList from "./ItemList";
-import db from "./../../../service/firebase";
 
 function ItemListContainer() {
   
-  const [products, setProducts] = useState([]);
-
-  let filtrarPorCategoria = [];
+  
+  let categoria = [];
 
   const { productosCategoria } = useParams();
 
-  const [loading, setLoading] = useState(true);
-
-  if (productosCategoria != undefined) {
-    filtrarPorCategoria = products.filter(
-      (e) => e.category === productosCategoria
-    );
-  }
-
-  //Funcion que busca en firestore, en la coleccion llamada items
-  const getData = async () => {
-    try {
-      const data = collection(db, "items");
-
-      const dataObtenida = await getDocs(data);
-
-      const result = dataObtenida.docs.map(
-        (doc) => (doc = { id: doc.id, ...doc.data() })
-      );
-
-      setProducts(result);
-    } catch (error) {
-      console.log(error);
-    }
-  };
+  const { traerDatos, products, loading } = useFireStore();
 
   useEffect(() => {
-    getData();
-    setTimeout(() => {
-      setLoading(false);
-    }, 3000);
+    traerDatos();
   }, []);
-
-  return (
-    <>
-      {loading ? (
-        <Loader />
-      ) : productosCategoria === undefined ? (
-        <ItemList products={products} />
-      ) : (
-        <ItemList products={filtrarPorCategoria} />
-      )}
-    </>
-  );
+  
+  if (productosCategoria != undefined) {
+    categoria = products && products.filter((e) => e.category == productosCategoria);
+    
+    return <>{loading ? <Loader /> : <ItemList products={categoria} />}</>;
+  } else {
+    return <>{loading ? <Loader /> : <ItemList products={products} />}</>;
+  }
 }
 export default ItemListContainer;

@@ -5,7 +5,7 @@ import ValorMoneda from '../consultaValor/ValorMonedaEth'
 
 function Cart() {
 
-  const {carrito,cantidad,totalEthEnCart,removeItem,clearCart} = useContext(CarritoContext)
+  const {carrito,totalEthEnCart,removeItem,clearCart} = useContext(CarritoContext)
 
   if(carrito.length==0){
     return( 
