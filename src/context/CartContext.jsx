@@ -12,8 +12,7 @@ const CartContext = ({ children }) => {
 
   const addItem = (item, quantity) => {
     
-    if(quantity>1){item.cantidad+= quantity}
-    else{ item.cantidad++}
+    if(quantity){item.cantidad+= quantity};
     
     let totalEth=0;
     
@@ -27,9 +26,7 @@ const CartContext = ({ children }) => {
     }else{
       setCarrito([...carrito, item]);
       setCantidad(quantity);
-      
     }
-    
   };
 
   const removeItem = (id) => {

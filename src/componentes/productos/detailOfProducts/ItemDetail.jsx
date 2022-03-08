@@ -15,6 +15,7 @@ function ItemDetail ({ details }) {
     }
 
     return (
+        stock == 0? <h1>Sin Disponibilidad de producto</h1>:
         <div className="pageDetail">
                 {(<div className={'item'+id}>
                     <img src={imgUrl} alt="" className="imgDetail"/>

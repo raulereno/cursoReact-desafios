@@ -3,6 +3,7 @@
 @import 'detailOfProducts';
 @import 'cart';
 @import 'loader';
+@import 'checkout';
 
 *{
     font-family: 'Oxygen', sans-serif;
@@ -13,7 +14,7 @@ body{
 
 .navBar{
     display: flex;
-    background-color: #0A0708;
+    background-color: black;
     justify-content: space-between;
 
     .logo{
@@ -69,7 +70,7 @@ body{
             .linkACarrito{
                 display: flex;
                 
-                background-color: #0A0708;
+                background-color: black;
                 &:hover{
                     transform: scale(1.2);
                     color:white;

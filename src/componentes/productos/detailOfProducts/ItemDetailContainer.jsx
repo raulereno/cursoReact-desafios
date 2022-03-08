@@ -12,8 +12,6 @@ function ItemDetailContainer() {
   const { id } = useParams();
   const {details, getDetailData}= useFireStore();
 
-
- 
   useEffect(() => {
      getDetailData({id})
   }, [])

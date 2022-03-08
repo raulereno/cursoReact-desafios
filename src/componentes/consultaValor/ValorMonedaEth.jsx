@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 
-const ValorMoneda = ({precioEnEth, precioEnPesos}) => {
+const ValorMoneda = ({precioEnEth}) => {
     
     const [valorEth, setValor] = useState(null);
 

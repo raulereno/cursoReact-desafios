@@ -3,9 +3,10 @@ import React from 'react'
 function Inicio() {
   return (
     <div className='homePage'>
-        <img src="https://img.freepik.com/vector-gratis/texto-desmenuzado-ntf-token-no-fungible-caida-cubos-dorados-aislados-sobre-fondo-negro-texto-fragmentado-bloques-amarillos-elemento-diseno-vectorial_337410-1292.jpg?size=626&ext=jpg" alt="" className='imagenHome' />
-        {/* <h1 className='tituloHome'>NFT</h1> */}
-        <h2 className='defIng'>Non-Fungible Token</h2>
+      <div className='containerImgHome'>
+      </div>
+
+        <h1 className='defIng'>Non-Fungible Token</h1>
         <h2 className='defEs'>Token No Fungible</h2>
         <p className='explicacion'>Un token no fungible (en inglés, non-fungible token), o NFT por sus siglas en inglés, es un tipo especial de token criptográfico que representa algo único. Los tókenes no fungibles no son, por tanto, mutuamente intercambiables.23 Esto contrasta con las criptomonedas como el bitcoin, y muchos tókenes de red o de utilidad que son fungibles por naturaleza.4 Las cuatro principales características de los NFT es que son únicos, indivisibles, transferibles y con la capacidad de demostrar su escasez.</p>
         <p className='explicacion'>
