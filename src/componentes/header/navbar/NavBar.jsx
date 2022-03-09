@@ -41,7 +41,11 @@ function NavBar(){
                         </li>
                     </ul>
                 </nav>
-                <button type='button' className='btn btn-secondary botonLogin'>Login</button>
+                {/* Funcion a agregar mas adelante */}
+                {/* <button type='button' className='btn btn-secondary botonLogin'>Login</button> */}
+                <div style={{width:210}}>
+
+                </div>
         </div>
     )
 }

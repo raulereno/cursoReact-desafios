@@ -11,15 +11,17 @@
         background-image: url("../componentes/homePage/imagenHome.jpg");
         background-repeat: no-repeat;
         background-position: center;
-
+        background-attachment: fixed;
     }
     .defIng{
-        font-size: 2rem;
+        margin-top: 5rem;
+        font-size: 3rem;
         color: white;
     }
     .defEs{
-        font-size: 2rem;
-        color: white;        
+        font-size: 3rem;
+        color: white;   
+        margin-bottom: 2rem;     
     }
     .explicacion{
         font-size: 1.5rem;

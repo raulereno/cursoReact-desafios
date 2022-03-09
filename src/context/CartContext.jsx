@@ -11,8 +11,9 @@ const CartContext = ({ children }) => {
   const [totalEthEnCart, setTotalEth] = useState(null) 
 
   const addItem = (item, quantity) => {
-    
+    console.log(quantity);
     if(quantity){item.cantidad+= quantity};
+    console.log(item.cantidad);
     
     let totalEth=0;
     
