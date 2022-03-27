@@ -30,8 +30,11 @@ const Checkout = () => {
   };
 
   const handleSubmit = (evt) => {
+    //Previene el comportamiento default del boton submit
     evt.preventDefault();
+    //Genera la orden mandando los datos del form
     generateOrder({ datos: form });
+    //Limpiamos formularios
     setForm({
       ...form,
       buyer: {
@@ -40,6 +43,7 @@ const Checkout = () => {
         email: "",
       }
     });
+    
     clearCart();
   };
 

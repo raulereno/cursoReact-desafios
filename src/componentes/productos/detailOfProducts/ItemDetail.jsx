@@ -2,11 +2,9 @@ import React, { useState,useContext,useEffect} from "react";
 import ItemCount from './../controller/ItemCount';
 import {Link} from 'react-router-dom'
 import ValorMonedaEth from "../../consultaValor/ValorMonedaEth";
-import { CarritoContext } from "../../../context/CartContext";
 
 function ItemDetail ({ details }) {
-    
-    const {carrito}= useContext(CarritoContext)
+        
     const {name,imgUrl,price,creator,contractAdress,tokenStandard,blockChain,metaData,id,stock} = details ;
     
     const [cantidad, setCantidad] = useState(null)
