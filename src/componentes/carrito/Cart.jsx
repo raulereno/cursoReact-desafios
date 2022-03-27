@@ -2,24 +2,14 @@ import React, { useContext } from "react";
 import { Link } from "react-router-dom";
 import { CarritoContext } from "./../../context/CartContext";
 import ValorMoneda from "../consultaValor/ValorMonedaEth";
+import ErrorItems from "../errorItems/ErrorItems";
 
 function Cart() {
   const { carrito, totalEthEnCart, removeItem, clearCart } = useContext(CarritoContext);
 
   if (carrito.length == 0) {
     return (
-      <div className="mensajeCarritoVacio">
-        <p className="explicacion">No posee ningun articulo en el carrito</p>
-        <p className="pregunta">Que desea hacer?</p>
-        <div className="links">
-          <Link to={"/"} className={"btn btn-light"}>
-            Ir al Inicio
-          </Link>
-          <Link to={"/Productos"} className={"btn btn-light"}>
-            Ir a catalogo
-          </Link>
-        </div>
-      </div>
+      <ErrorItems mensaje={"No posee ningun articulo en el carrito"}></ErrorItems>
     );
   }
   return (

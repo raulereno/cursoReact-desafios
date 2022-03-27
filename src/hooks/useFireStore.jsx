@@ -66,6 +66,7 @@ const useFireStore = () => {
       datos.items.map((e) => {
         actualizarStock(e);
       });
+
       Swal.fire({
         title: `Gracias ${datos.buyer.name} `,
         html: `<h2>Le enviaremos los datos de la factura a su casilla de email!</h2>
@@ -78,6 +79,7 @@ const useFireStore = () => {
         icon: "success",
         confirmButtonText: "Entendido",
       });
+      
     } catch (error) {
       console.log(error);
     }
