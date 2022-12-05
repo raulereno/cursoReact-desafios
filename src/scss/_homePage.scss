@@ -1,0 +1,30 @@
+.homePage{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    .containerImgHome{
+        display: flex;
+        justify-content: center;
+        background-color: black;
+        width: 100%;
+        height: 25rem;
+        background-image: url("../componentes/homePage/imagenHome.jpg");
+        background-repeat: no-repeat;
+        background-position: center;
+        background-attachment: fixed;
+    }
+    .defIng{
+        margin-top: 5rem;
+        font-size: 3rem;
+        color: white;
+    }
+    .defEs{
+        font-size: 3rem;
+        color: white;   
+        margin-bottom: 2rem;     
+    }
+    .explicacion{
+        font-size: 1.5rem;
+        color: white;
+    }
+}

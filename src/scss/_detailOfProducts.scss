@@ -1,0 +1,50 @@
+.pageDetail {
+    color: whitesmoke;
+    div {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        .imgDetail {
+            justify-self: center;
+            width: 30rem;
+            height: 30rem;
+            margin: 1rem;
+        }
+        .containerInfoProd {
+            justify-self: center;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            width: 35%;
+
+            .linkAColeccion{
+                color: whitesmoke;
+            }
+            .comprarAhora{
+                width: 10rem;
+            }
+        }
+    
+        .additionalInfo {
+            display: flex;
+            flex-direction: column;
+            width: 50%;
+            align-items: center;
+            margin-top: 1rem;
+
+            background-color: whitesmoke;
+            
+            h3{
+                color: black;
+                background-color: whitesmoke;
+                padding: 1rem;
+            }
+            p{
+                color: black;
+            }
+        }
+    }
+
+
+
+}
